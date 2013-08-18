@@ -4,7 +4,7 @@
 Plugin Name: Ebor Popular Posts Widget
 Plugin URI: http://www.madeinebor.com
 Description: Adds a popular posts widget which displays a specified amount of posts by comment count.
-Version: 1.0
+Version: 1.1
 Author: TommusRhodus
 Author URI: http://www.madeinebor.com
 */	
@@ -18,11 +18,11 @@ function ebor_popular_posts_update() {
 
 		$config = array(
 			'slug' => plugin_basename( __FILE__ ),
-			'proper_folder_name' => 'Ebor-oEmbed',
-			'api_url' => 'https://api.github.com/repos/tommusrhodus/Ebor-oEmbed',
-			'raw_url' => 'https://raw.github.com/tommusrhodus/Ebor-oEmbed/master',
-			'github_url' => 'https://github.com/tommusrhodus/Ebor-oEmbed',
-			'zip_url' => 'https://github.com/tommusrhodus/Ebor-oEmbed/archive/master.zip',
+			'proper_folder_name' => 'Ebor-Popular-Posts',
+			'api_url' => 'https://api.github.com/repos/tommusrhodus/Ebor-Popular-Posts',
+			'raw_url' => 'https://raw.github.com/tommusrhodus/Ebor-Popular-Posts/master',
+			'github_url' => 'https://github.com/tommusrhodus/Ebor-Popular-Posts',
+			'zip_url' => 'https://github.com/tommusrhodus/Ebor-Popular-Posts/archive/master.zip',
 			'sslverify' => true,
 			'requires' => '3.6',
 			'tested' => '3.6',
