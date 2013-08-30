@@ -41,7 +41,7 @@ class ebor_popular_Widget extends WP_Widget {
 			echo  $before_title.$title.$after_title;
 		} ?>
 		
-			<?php if( wp_get_theme() == 'Seabird' ) : ?>
+			<?php if( wp_get_theme() == 'Seabird' || wp_get_theme() == 'Kyte' ) : ?>
 				<ul class="post-list">
 				
 				<?php query_posts('post_type=post&posts_per_page=' . $instance['amount'] . '&orderby=comment_count&order=DESC'); while ( have_posts() ): the_post(); ?>
