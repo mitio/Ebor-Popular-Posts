@@ -54,7 +54,7 @@ class ebor_popular_Widget extends WP_Widget {
 				        </a>
 				    </figure>
 				    <div class="meta">
-				      <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+				      <h6 style="text-transform: capitalize;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 				      <em><?php the_time(get_option('date_format')); ?></em>
 				    </div>
 				  </li>
