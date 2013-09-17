@@ -61,6 +61,15 @@ class ebor_popular_Widget extends WP_Widget {
 				  
 				  <?php endwhile; wp_reset_query(); ?> 
 				</ul>
+			<?php elseif( wp_get_theme() == 'Wiretree' || wp_get_theme()->parent() == 'Wiretree' ) : ?>
+		        <ul class="post-list">
+		        	<?php query_posts('post_type=post&posts_per_page=' . $instance['amount'] . '&orderby=comment_count&order=DESC'); while ( have_posts() ): the_post(); ?>
+			          <li>
+			            <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?>/a></h6>
+			            <em><?php the_time(get_option('date_format')); ?></em>
+			          </li>
+		            <?php endwhile; wp_reset_query(); ?> 
+		        </ul>
 			<?php else : ?>
 				<dl>
 				  <?php $popular = new WP_Query('post_type=post&posts_per_page=' . $instance['amount'] . '&orderby=comment_count&order=DESC'); if( $popular->have_posts() ) : while ( $popular->have_posts() ): $popular->the_post(); ?>
