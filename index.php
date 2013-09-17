@@ -65,7 +65,7 @@ class ebor_popular_Widget extends WP_Widget {
 		        <ul class="post-list">
 		        	<?php query_posts('post_type=post&posts_per_page=' . $instance['amount'] . '&orderby=comment_count&order=DESC'); while ( have_posts() ): the_post(); ?>
 			          <li>
-			            <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?>/a></h6>
+			            <h6><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 			            <em><?php the_time(get_option('date_format')); ?></em>
 			          </li>
 		            <?php endwhile; wp_reset_query(); ?> 
