@@ -21,13 +21,12 @@ function ebor_popular_load_widgets()
 
 class ebor_popular_Widget extends WP_Widget {
 	
-	function ebor_popular_Widget()
-	{
-		$widget_ops = array('classname' => 'ebor_popular', 'description' => '');
-
-		$control_ops = array('id_base' => 'ebor_popular-widget');
-
-		$this->WP_Widget('ebor_popular-widget', 'Ebor: Popular Posts', $widget_ops, $control_ops);
+	function ebor_popular_Widget(){
+		parent::__construct(
+			'ebor_popular-widget', // Base ID
+			__('TommusRhodus: Popular Posts', 'ebor_framework'), // Name
+			array( 'description' => __( 'Add a simple popular posts widget', 'ebor_framework' ), ) // Args
+		);
 	}
 	
 	function widget($args, $instance)
